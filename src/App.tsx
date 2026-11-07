@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { CardHero } from './components/CardHero';
 import { CardOurStory } from './components/CardOurStory';
 import { CardWeddingEvents } from './components/CardWeddingEvents';
@@ -7,6 +7,7 @@ import { CardMeetFamilies } from './components/CardMeetFamilies';
 import { CardRSVP } from './components/CardRSVP';
 import { CardSaveTheDate } from './components/CardSaveTheDate';
 import { CardBlessingsOutro } from './components/CardBlessingsOutro';
+import { InvitationCoverGate } from './components/InvitationCoverGate';
 
 import { RSVPModal } from './components/RSVPModal';
 import { VenueModal } from './components/VenueModal';
@@ -22,6 +23,12 @@ import { WeddingEvent } from './types/wedding';
 import { Heart } from 'lucide-react';
 
 export function App() {
+  // Gate Entrance & Audio Synchronous State
+  const [hasEntered, setHasEntered] = useState<boolean>(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState<boolean>(false);
+  const [isUnveiling, setIsUnveiling] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
   // Modals & Navigation State
   const [isRSVPOpen, setIsRSVPOpen] = useState<boolean>(false);
   const [isVenueOpen, setIsVenueOpen] = useState<boolean>(false);
@@ -33,6 +40,64 @@ export function App() {
 
   // Floating Falling Petals Toggle
   const [petalsActive, setPetalsActive] = useState<boolean>(true);
+
+  // Synchronize audio state with HTML5 audio events
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const handlePlay = () => setIsMusicPlaying(true);
+    const handlePause = () => setIsMusicPlaying(false);
+
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+
+    return () => {
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
+    };
+  }, []);
+
+  // Entrance Handler: Triggered by user tap on Cover Gate
+  const handleEnterInvitation = () => {
+    // 1. Play audio synchronously inside the click gesture to satisfy browser autoplay policy
+    if (audioRef.current) {
+      audioRef.current.volume = 0.6;
+      audioRef.current
+        .play()
+        .then(() => setIsMusicPlaying(true))
+        .catch((err) => {
+          console.warn('Playback prevented by browser policy:', err);
+        });
+    }
+
+    // 2. Trigger unveiling transition
+    setIsUnveiling(true);
+
+    // 3. Complete transition after animation
+    setTimeout(() => {
+      setHasEntered(true);
+    }, 700);
+  };
+
+  // Toggle Music Play/Pause from the floating FAB
+  const handleToggleMusic = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isMusicPlaying) {
+      audio.pause();
+      setIsMusicPlaying(false);
+    } else {
+      audio
+        .play()
+        .then(() => setIsMusicPlaying(true))
+        .catch((err) => {
+          console.warn('Playback prevented:', err);
+        });
+    }
+  };
 
   // Smooth Scroll to Card Handler
   const scrollToCard = (targetId: string) => {
@@ -81,6 +146,14 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#f6eedf] text-[#4a2c1d] relative font-body selection:bg-[#821c21] selection:text-[#faf2e3] overflow-x-hidden">
+      {/* Wedding Song Audio Tag */}
+      <audio
+        ref={audioRef}
+        src="/audio/wedding-song.mp3"
+        loop
+        preload="auto"
+      />
+
       {/* Background Parchment Patina Overlay */}
       <div
         className="fixed inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-repeat bg-[length:400px_400px]"
@@ -90,8 +163,20 @@ export function App() {
       {/* Floating Rose & Marigold Petals */}
       <PetalsAnimation active={petalsActive} />
 
-      {/* Background Wedding Song Music Player */}
-      <AudioPlayer />
+      {/* Royal Cover Gate: Full screen Entrance where tap starts music and enters invite */}
+      {!hasEntered && (
+        <InvitationCoverGate
+          onEnter={handleEnterInvitation}
+          isUnveiling={isUnveiling}
+        />
+      )}
+
+      {/* Floating Wedding Song Music Player Button (Only Logo Icon, Visible once entered) */}
+      <AudioPlayer
+        isPlaying={isMusicPlaying}
+        onToggleMusic={handleToggleMusic}
+        visible={hasEntered}
+      />
 
       {/* ============================================================== */}
       {/* MAIN VERTICAL FEED: FULL SCREEN IMMERSIVE SECTIONS             */}
