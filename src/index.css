@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #f6eedf;
+    color: #4a2c1d;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-royal {
+  font-family: 'Cinzel', serif;
+}
+
+.font-marcellus {
+  font-family: 'Marcellus', serif;
+}
+
+.font-devanagari {
+  font-family: 'Noto Serif Devanagari', 'Rozha One', serif;
+}
+
+.font-body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Custom Royal Indian Decorative Borders & Shadows */
+.gold-card-border {
+  border: 1.5px solid #d4af37;
+  box-shadow: 0 4px 20px rgba(184, 134, 11, 0.12), inset 0 0 15px rgba(212, 175, 55, 0.08);
+}
+
+.gold-double-border {
+  border: 3px double #b8860b;
+}
+
+.jharokha-arch {
+  border-top-left-radius: 50% 30%;
+  border-top-right-radius: 50% 30%;
+}
+
+.parchment-bg {
+  background-color: #faf4e8;
+  background-image: radial-gradient(#d4af37 0.5px, transparent 0.5px), radial-gradient(#d4af37 0.5px, #faf4e8 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f7efe2;
+}
+::-webkit-scrollbar-thumb {
+  background: #c89d53;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9d2933;
+}
+
+/* 3D Flip Card Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.animate-gentle-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes fallPetal {
+  0% {
+    transform: translate(0, -10px) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(60px, 105vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.petal-particle {
+  position: fixed;
+  top: -20px;
+  pointer-events: none;
+  z-index: 50;
+  animation: fallPetal linear infinite;
+}
+
+/* Golden shimmer sweep animation across card surfaces */
+@keyframes sheen {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+.animate-sheen {
+  animation: sheen 3s infinite ease-in-out;
+}
+
+/* Diya flame flicker animation */
+@keyframes diyaFlicker {
+  0%, 100% { transform: scale(1) translateY(0); opacity: 0.95; }
+  25% { transform: scale(1.08) translateY(-1.5px) rotate(1.5deg); opacity: 1; }
+  50% { transform: scale(0.95) translateY(1px) rotate(-1.5deg); opacity: 0.88; }
+  75% { transform: scale(1.05) translateY(-0.8px); opacity: 0.98; }
+}
+
+.animate-diya {
+  animation: diyaFlicker 1.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Pulsing golden aura glow */
+@keyframes goldPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.25), 0 0 20px rgba(212, 175, 55, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(212, 175, 55, 0.6), 0 0 35px rgba(212, 175, 55, 0.25);
+  }
+}
+
+.animate-gold-glow {
+  animation: goldPulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Click Sparkle Pulse */
+@keyframes touchPulse {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.animate-touch-ripple {
+  animation: touchPulse 0.6s ease-out forwards;
+}
