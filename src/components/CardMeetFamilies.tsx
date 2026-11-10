@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { FloralFlourish, CornerFloralVine } from './Ornaments';
 import { COUPLE_NAMES } from '../data/weddingData';
 import { Crown, Sparkles, Heart } from 'lucide-react';
@@ -10,12 +10,33 @@ interface CardMeetFamiliesProps {
 }
 
 export const CardMeetFamilies: React.FC<CardMeetFamiliesProps> = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Autoplay handled smoothly once user interacts
+      });
+    }
+  }, []);
+
   const handlePortraitTap = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = (rect.left + rect.width / 2) / window.innerWidth;
     const y = (rect.top + rect.height / 2) / window.innerHeight;
     triggerPetalBurst(x, y, 25);
     playTempleBellChime();
+  };
+
+  const handleVideoTap = (e: React.MouseEvent) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (rect.left + rect.width / 2) / window.innerWidth;
+    const y = (rect.top + rect.height / 2) / window.innerHeight;
+    triggerPetalBurst(x, y, 30);
+    playTempleBellChime();
+    if (videoRef.current && videoRef.current.paused) {
+      videoRef.current.play();
+    }
   };
 
   return (
@@ -145,17 +166,33 @@ export const CardMeetFamilies: React.FC<CardMeetFamiliesProps> = () => {
           </div>
         </div>
 
-        {/* Grand Royal Palace Courtyard & Festive Gardens Painting in Arched Frame */}
-        <div className="relative w-full max-w-md sm:max-w-xl aspect-[16/10] rounded-[26px] overflow-hidden border-2 sm:border-3 border-[#d2aa53] shadow-2xl bg-[#faf2de] transition-transform duration-500 hover:scale-[1.01] my-3 group/palace cursor-pointer">
-          <img
-            src="/images/ayodhya-palace-courtyard.jpg"
-            alt="Ayodhya Grand Palace Courtyard & Royal Celebration"
+        {/* Grand Royal Palace & Peacock in Living Sacred Waters Video in Arched Frame */}
+        <div
+          onClick={handleVideoTap}
+          className="relative w-full max-w-md sm:max-w-xl aspect-[16/10] rounded-[26px] overflow-hidden border-2 sm:border-3 border-[#d2aa53] shadow-2xl bg-[#1b1009] transition-transform duration-500 hover:scale-[1.01] my-3 group/palace cursor-pointer"
+          title="Tap for festive petals"
+        >
+          <video
+            ref={videoRef}
+            src="/videos/peacock-water.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster="/images/ayodhya-palace-courtyard.jpg"
             className="w-full h-full object-cover object-center group-hover/palace:scale-105 transition-transform duration-700"
           />
+          {/* Subtle Golden Sheen on Hover */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-0 group-hover/palace:opacity-100 transition-opacity">
-            <div className="w-[140%] h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-sheen" />
+            <div className="w-[140%] h-full bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full animate-sheen" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#faf3e3]/20 via-transparent to-transparent pointer-events-none" />
+          {/* Bottom Vignette & Royal Caption */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1b1009]/60 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute bottom-2.5 right-3.5 px-3 py-1 rounded-full bg-[#1b1009]/75 backdrop-blur-xs border border-[#d2aa53]/50 text-[#fde4aa] text-[10px] sm:text-xs font-marcellus flex items-center space-x-1.5 pointer-events-none shadow-md">
+            <Sparkles className="w-3 h-3 text-[#ffd885] animate-pulse" />
+            <span>Royal Palace Courtyard • Living Waters</span>
+          </div>
         </div>
       </div>
 
