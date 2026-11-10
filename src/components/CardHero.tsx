@@ -1,7 +1,7 @@
 import React from 'react';
 import { CornerFloralVine, FloralFlourish } from './Ornaments';
 import { triggerPushpaVrishti, playTempleBellChime, triggerPetalBurst } from '../utils/interactiveEffects';
-import { Sparkles, Flower2, ChevronDown, Calendar, Clock, MapPin, CalendarPlus, Crown } from 'lucide-react';
+import { Sparkles, Flower2, ChevronDown, Calendar, Clock, MapPin, Crown } from 'lucide-react';
 import { COUPLE_NAMES } from '../data/weddingData';
 
 interface CardHeroProps {
@@ -25,19 +25,6 @@ export const CardHero: React.FC<CardHeroProps> = ({
     e.stopPropagation();
     playTempleBellChime();
     triggerPushpaVrishti();
-  };
-
-  const handleSaveTheDate = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    playTempleBellChime();
-    triggerPetalBurst(0.5, 0.5, 25);
-    const title = encodeURIComponent(`${COUPLE_NAMES.tagline} Royal Wedding Ceremony`);
-    const details = encodeURIComponent(
-      `Join us in celebrating the holy wedding union of ${COUPLE_NAMES.groom} & ${COUPLE_NAMES.bride}.\n\nVenue: ${COUPLE_NAMES.venueFullAddress}\nDate: ${COUPLE_NAMES.weddingDateDisplay}\nTime: 11:30 AM Onwards`
-    );
-    const location = encodeURIComponent(COUPLE_NAMES.venueFullAddress);
-    const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20261216T060000Z/20261216T183000Z&details=${details}&location=${location}`;
-    window.open(gcalUrl, '_blank');
   };
 
   return (
@@ -210,16 +197,6 @@ export const CardHero: React.FC<CardHeroProps> = ({
           >
             <Flower2 className="w-4 h-4 text-[#e11d48] group-hover:rotate-45 transition-transform" />
             <span>पुष्प वर्षा (Flower Shower)</span>
-          </button>
-
-          {/* Save to Calendar Button */}
-          <button
-            onClick={handleSaveTheDate}
-            className="px-4 sm:px-5 py-3 bg-[#faf2df] hover:bg-[#f5e5c4] text-[#821c21] font-marcellus text-xs sm:text-sm font-semibold rounded-full shadow-md border-2 border-[#d2aa53] transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer flex items-center space-x-1.5"
-            title="Add Wedding to Google Calendar"
-          >
-            <CalendarPlus className="w-3.5 h-3.5 text-[#a37128]" />
-            <span>Save Date</span>
           </button>
         </div>
 
