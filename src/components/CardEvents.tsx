@@ -30,7 +30,7 @@ export const CardEvents: React.FC<CardEventsProps> = ({
       {/* Background Parchment Texture */}
       <div
         className="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Corner Floral Foliage */}

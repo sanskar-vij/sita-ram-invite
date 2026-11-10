@@ -24,7 +24,7 @@ export const CardSangeet: React.FC<CardSangeetProps> = ({
       {/* Background Parchment Patina */}
       <div
         className="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Corner Floral Foliage */}
@@ -83,7 +83,7 @@ export const CardSangeet: React.FC<CardSangeetProps> = ({
         className="relative w-full h-[52%] mt-auto z-10 flex items-end overflow-hidden cursor-pointer group"
       >
         <img
-          src="/images/sangeet-dholak.jpg"
+          src="/images/sangeet-dholak.webp"
           alt="Sangeet Ceremony - Traditional Royal Dholak & Lights"
           className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
         />

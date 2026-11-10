@@ -157,7 +157,7 @@ export function App() {
       {/* Background Parchment Patina Overlay */}
       <div
         className="fixed inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-repeat bg-[length:400px_400px]"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Floating Rose & Marigold Petals */}

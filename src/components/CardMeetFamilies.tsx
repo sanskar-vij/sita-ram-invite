@@ -47,7 +47,7 @@ export const CardMeetFamilies: React.FC<CardMeetFamiliesProps> = () => {
       {/* Background Parchment Texture */}
       <div
         className="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Corner Floral Foliage */}
@@ -90,7 +90,7 @@ export const CardMeetFamilies: React.FC<CardMeetFamiliesProps> = () => {
               title="Tap for family blessings"
             >
               <img
-                src="/images/family-sharma.jpg"
+                src="/images/family-sharma.webp"
                 alt="The Sharma Family Elders - वर पक्ष"
                 className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500"
               />
@@ -136,7 +136,7 @@ export const CardMeetFamilies: React.FC<CardMeetFamiliesProps> = () => {
               title="Tap for family blessings"
             >
               <img
-                src="/images/family-mishra.jpg"
+                src="/images/family-mishra.webp"
                 alt="The Mishra Family Elders - वधू पक्ष"
                 className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500"
               />
@@ -174,13 +174,13 @@ export const CardMeetFamilies: React.FC<CardMeetFamiliesProps> = () => {
         >
           <video
             ref={videoRef}
-            src="/videos/peacock-water.mp4"
+            src="/videos/peacock-water.webm"
             autoPlay
             loop
             muted
             playsInline
             preload="auto"
-            poster="/images/ayodhya-palace-courtyard.jpg"
+            poster="/images/ayodhya-palace-courtyard.webp"
             className="w-full h-full object-cover object-center group-hover/palace:scale-105 transition-transform duration-700"
           />
           {/* Subtle Golden Sheen on Hover */}

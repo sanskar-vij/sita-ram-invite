@@ -70,7 +70,7 @@ END:VCALENDAR`;
         {/* Background texture */}
         <div
           className="absolute inset-0 opacity-15 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         {/* Modal Header */}

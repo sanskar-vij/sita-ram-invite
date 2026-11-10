@@ -24,7 +24,7 @@ export const CardHaldi: React.FC<CardHaldiProps> = ({
       {/* Background Parchment Patina */}
       <div
         className="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Corner Floral Foliage */}
@@ -83,7 +83,7 @@ export const CardHaldi: React.FC<CardHaldiProps> = ({
         className="relative w-full h-[52%] mt-auto z-10 flex items-end overflow-hidden cursor-pointer group"
       >
         <img
-          src="/images/haldi-urli.jpg"
+          src="/images/haldi-urli.webp"
           alt="Haldi Ceremony - Golden Turmeric Urli"
           className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
         />

@@ -131,7 +131,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
         {/* Parchment Patina */}
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         {/* Corner Vines */}
@@ -168,7 +168,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
           {/* Royal Portrait */}
           <div className="w-full max-w-md aspect-[16/10] rounded-2xl overflow-hidden border-2 border-[#d2aa53] shadow-lg my-6 bg-[#f4e7cd]">
             <img
-              src="/images/hero-sita-ram.jpg"
+              src="/images/hero-sita-ram.webp"
               alt="Anirudh & Vaidehi - Blessed by Sita-Ram"
               className="w-full h-full object-cover"
             />
@@ -209,7 +209,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
       >
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
@@ -229,7 +229,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
 
           <div className="w-full max-w-sm aspect-[4/3] rounded-2xl overflow-hidden border-2 border-[#d2aa53] shadow-md my-4 bg-[#f4e7cd]">
             <img
-              src="/images/story-couple.jpg"
+              src="/images/story-couple.webp"
               alt="Anirudh & Vaidehi - Our Story"
               className="w-full h-full object-cover"
             />
@@ -251,7 +251,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
       >
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         <div className="relative z-10 text-center max-w-2xl mx-auto mb-6">
@@ -321,7 +321,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
                 {/* Subtle card parchment */}
                 <div
                   className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-                  style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+                  style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
                 />
 
                 {/* Card Header line */}
@@ -389,7 +389,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
                 {/* Subtle card parchment */}
                 <div
                   className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-                  style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+                  style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
                 />
 
                 {/* Card Header line */}
@@ -456,7 +456,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
       >
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -517,7 +517,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
           {/* Mandap Image */}
           <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden border-2 border-[#d2aa53] shadow-lg bg-[#f4e7cd]">
             <img
-              src="/images/mandap-big-day.jpg"
+              src="/images/mandap-big-day.webp"
               alt="Royal Vivah Mandap"
               className="w-full h-full object-cover"
             />
@@ -535,7 +535,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
       >
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         <div className="relative z-10 max-w-lg mx-auto space-y-3">
@@ -585,13 +585,13 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
       >
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden border-2 border-[#d2aa53] shadow-lg order-2 md:order-1 bg-[#f4e7cd]">
             <img
-              src="/images/palace-river-ghats.jpg"
+              src="/images/palace-river-ghats.webp"
               alt="Ayodhya Grand Palace, Agra"
               className="w-full h-full object-cover"
             />
@@ -642,7 +642,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
       >
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         <div className="relative z-10 max-w-lg mx-auto text-center">
@@ -756,7 +756,7 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
       >
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         <div className="relative z-10 max-w-lg mx-auto space-y-3">

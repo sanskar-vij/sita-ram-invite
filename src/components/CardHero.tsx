@@ -35,14 +35,14 @@ export const CardHero: React.FC<CardHeroProps> = ({
       {/* 1. SCENIC ROYAL AYODHYA PALACE SCENIC BACKDROP (Full Bleed Gateway Atmosphere) */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-35 mix-blend-multiply pointer-events-none scale-105"
-        style={{ backgroundImage: `url('/images/save-the-date-palace.jpg')` }}
+        style={{ backgroundImage: `url('/images/save-the-date-palace.webp')` }}
       />
 
       {/* 2. WARM GOLDEN TWILIGHT VIGNETTE & PARCHMENT PATINA */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#faf3e3]/95 via-[#faf3e3]/75 to-[#faf3e3]/95 pointer-events-none" />
       <div
         className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* 3. ROYAL ARCHITECTURAL PALACE ARCHWAY CONTOUR */}
@@ -125,7 +125,7 @@ export const CardHero: React.FC<CardHeroProps> = ({
             <div className="absolute inset-1.5 rounded-t-[38px] sm:rounded-t-[48px] rounded-b-[18px] border border-[#ffd885]/60 pointer-events-none z-10" />
 
             <img
-              src="/images/hero-sita-ram.jpg"
+              src="/images/hero-sita-ram.webp"
               alt="Lord Rama and Mata Sita Divine Grace"
               className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
             />

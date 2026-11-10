@@ -21,7 +21,7 @@ export const CardOurStory: React.FC<CardOurStoryProps> = ({
       {/* Background Parchment Patina */}
       <div
         className="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Corner Floral Foliage */}
@@ -51,7 +51,7 @@ export const CardOurStory: React.FC<CardOurStoryProps> = ({
           className="relative w-full max-w-[300px] sm:max-w-[360px] md:max-w-[400px] aspect-[2/3] rounded-[32px] overflow-hidden border-3 border-[#d2aa53] shadow-2xl bg-[#f5e9d0] transition-transform duration-500 hover:scale-[1.02] cursor-pointer group mb-6"
         >
           <img
-            src="/images/story-couple.jpg"
+            src="/images/story-couple.webp"
             alt="Anirudh and Vaidehi - Our Story"
             className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
           />

@@ -21,7 +21,7 @@ export const CardRSVP: React.FC<CardRSVPProps> = ({
       {/* Background Parchment Patina */}
       <div
         className="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Corner Floral Foliage */}
@@ -50,7 +50,7 @@ export const CardRSVP: React.FC<CardRSVPProps> = ({
           className="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[480px] aspect-[4/3] rounded-[32px] overflow-hidden border-3 border-[#d2aa53] shadow-2xl bg-[#f5e9d0] transition-transform duration-500 hover:scale-[1.02] cursor-pointer group mb-6"
         >
           <img
-            src="/images/rsvp-royal-scroll.jpg"
+            src="/images/rsvp-royal-scroll.webp"
             alt="Royal Wedding RSVP Scroll and Mogra Flowers"
             className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
           />

@@ -22,7 +22,7 @@ export const CardEventsOverview: React.FC<CardEventsOverviewProps> = ({
       name: 'Haldi',
       date: '14th Dec, 2026',
       time: '10:00 AM',
-      image: '/images/haldi-urli.jpg',
+      image: '/images/haldi-urli.webp',
       alt: 'Haldi Ceremony',
     },
     {
@@ -30,7 +30,7 @@ export const CardEventsOverview: React.FC<CardEventsOverviewProps> = ({
       name: 'Mehendi',
       date: '14th Dec, 2026',
       time: '04:00 PM',
-      image: '/images/mehendi-cone.jpg',
+      image: '/images/mehendi-cone.webp',
       alt: 'Mehendi Ceremony',
     },
     {
@@ -38,7 +38,7 @@ export const CardEventsOverview: React.FC<CardEventsOverviewProps> = ({
       name: 'Sangeet',
       date: '15th Dec, 2026',
       time: '07:00 PM',
-      image: '/images/sangeet-dholak.jpg',
+      image: '/images/sangeet-dholak.webp',
       alt: 'Sangeet Ceremony',
     },
     {
@@ -46,7 +46,7 @@ export const CardEventsOverview: React.FC<CardEventsOverviewProps> = ({
       name: 'Wedding',
       date: '16th Dec, 2026',
       time: '11:30 AM',
-      image: '/images/wedding-havan.jpg',
+      image: '/images/wedding-havan.webp',
       alt: 'Sacred Wedding Ceremony',
     },
   ];
@@ -59,7 +59,7 @@ export const CardEventsOverview: React.FC<CardEventsOverviewProps> = ({
       {/* Background Parchment Patina */}
       <div
         className="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Corner Floral Foliage */}

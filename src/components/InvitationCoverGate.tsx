@@ -35,14 +35,14 @@ export const InvitationCoverGate: React.FC<InvitationCoverGateProps> = ({ onEnte
       {/* 1. SCENIC ROYAL PALACE TWILIGHT BACKDROP */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-multiply pointer-events-none scale-105 transition-transform duration-10000"
-        style={{ backgroundImage: `url('/images/save-the-date-palace.jpg')` }}
+        style={{ backgroundImage: `url('/images/save-the-date-palace.webp')` }}
       />
 
       {/* 2. WARM GOLDEN VIGNETTE & PARCHMENT PATINA */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#faf3e3]/95 via-[#faf3e3]/75 to-[#faf3e3]/95 pointer-events-none" />
       <div
         className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* 3. ROYAL ARCHWAY CONTOUR */}

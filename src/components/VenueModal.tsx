@@ -21,7 +21,7 @@ export const VenueModal: React.FC<VenueModalProps> = ({
         {/* Background texture */}
         <div
           className="absolute inset-0 opacity-15 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         {/* Modal Header */}
@@ -47,7 +47,7 @@ export const VenueModal: React.FC<VenueModalProps> = ({
           {/* Venue Image */}
           <div className="w-full h-44 rounded-2xl overflow-hidden border border-[#d2aa53] relative shadow-md">
             <img
-              src="/images/mandap-big-day.jpg"
+              src="/images/mandap-big-day.webp"
               alt="Ayodhya Grand Palace Agra Wedding Mandap"
               className="w-full h-full object-cover"
             />

@@ -37,7 +37,7 @@ export const AllRitualsModal: React.FC<AllRitualsModalProps> = ({
         {/* Subtle background parchment */}
         <div
           className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+          style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
         />
 
         {/* Top Header */}

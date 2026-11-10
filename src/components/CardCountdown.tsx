@@ -64,7 +64,7 @@ export const CardCountdown: React.FC<CardCountdownProps> = ({
       {/* Background Parchment Patina */}
       <div
         className="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/parchment-texture.jpg')` }}
+        style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
       {/* Corner Floral Foliage */}
@@ -108,7 +108,7 @@ export const CardCountdown: React.FC<CardCountdownProps> = ({
         {/* Riverfront Palace Artwork */}
         <div className="relative w-full max-w-2xl sm:max-w-3xl aspect-[16/9] rounded-[28px] overflow-hidden border-3 border-[#d2aa53] shadow-2xl bg-[#f5e9d0] transition-transform duration-500 hover:scale-[1.01] my-2">
           <img
-            src="/images/palace-river-ghats.jpg"
+            src="/images/palace-river-ghats.webp"
             alt="Ancient Ayodhya Ghats along Holy Sarayu River"
             className="w-full h-full object-cover object-center"
           />
