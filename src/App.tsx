@@ -18,6 +18,8 @@ import { NavigationDrawer } from './components/NavigationDrawer';
 import { IndividualEventPage } from './components/IndividualEventPage';
 import { AudioPlayer } from './components/AudioPlayer';
 import { PetalsAnimation } from './components/PetalsAnimation';
+import { InteractiveSparkleTrail } from './components/InteractiveSparkleTrail';
+import { FloatingBlessingsPill } from './components/FloatingBlessingsPill';
 
 import { WeddingEvent } from './types/wedding';
 import { Heart } from 'lucide-react';
@@ -160,6 +162,9 @@ export function App() {
         style={{ backgroundImage: `url('/images/parchment-texture.webp')` }}
       />
 
+      {/* Interactive Global Golden Sparkles & Floating Micro-Petals */}
+      <InteractiveSparkleTrail />
+
       {/* Floating Rose & Marigold Petals */}
       <PetalsAnimation active={petalsActive} />
 
@@ -170,6 +175,9 @@ export function App() {
           isUnveiling={isUnveiling}
         />
       )}
+
+      {/* Floating Interactive Pushpanjali (Offer Flowers & Blessings) */}
+      <FloatingBlessingsPill visible={hasEntered} />
 
       {/* Floating Wedding Song Music Player Button (Only Logo Icon, Visible once entered) */}
       <AudioPlayer

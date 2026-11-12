@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node ./node_modules/vite/bin/vite.js",
     "build": "node ./node_modules/vite/bin/vite.js build",
-    "preview": "node ./node_modules/vite/bin/vite.js preview"
+    "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "live-edit": "node ../live-edit/skills/live-edit/scripts/live.mjs init",
+    "live:init": "node ../live-edit/skills/live-edit/scripts/live.mjs init"
   },
   "dependencies": {
     "@types/canvas-confetti": "^1.9.0",

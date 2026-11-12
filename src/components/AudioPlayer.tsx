@@ -100,6 +100,14 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
       {/* Floating Royal Audio Icon Button (ONLY LOGO, NO TEXT) */}
       <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 select-none">
+        {/* Pulsing Acoustic Radiant Waves when playing */}
+        {isMusicPlaying && (
+          <>
+            <div className="absolute inset-0 rounded-full bg-[#d2aa53]/30 animate-ping [animation-duration:2.5s] pointer-events-none" />
+            <div className="absolute -inset-1.5 rounded-full border border-[#d2aa53]/40 animate-pulse [animation-duration:2s] pointer-events-none" />
+          </>
+        )}
+
         <button
           onClick={toggleMusic}
           aria-label={isMusicPlaying ? 'Mute wedding music' : 'Play wedding music'}
@@ -116,6 +124,13 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
               <Disc3 className="w-6 h-6 sm:w-7 sm:h-7 animate-spin [animation-duration:3.5s] text-[#ffd885]" />
               {/* Center Soundwave Dot */}
               <span className="absolute w-2 h-2 rounded-full bg-[#821c21] border border-[#ffd885]" />
+              
+              {/* Miniature Soundwave Bars Indicator */}
+              <div className="absolute -bottom-1 -right-1 flex items-end space-x-0.5 bg-[#821c21] px-1 py-0.5 rounded-full border border-[#ffd885]">
+                <div className="w-0.5 bg-[#ffd885] animate-eq-1 rounded-full" />
+                <div className="w-0.5 bg-[#ffd885] animate-eq-2 rounded-full" />
+                <div className="w-0.5 bg-[#ffd885] animate-eq-3 rounded-full" />
+              </div>
             </div>
           ) : (
             <div className="relative flex items-center justify-center group-hover:scale-110 transition-transform">

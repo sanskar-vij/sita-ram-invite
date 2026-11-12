@@ -84,12 +84,12 @@ export const CardHero: React.FC<CardHeroProps> = ({
         </div>
 
         {/* Subtitle */}
-        <h2 className="font-marcellus text-[#4a2e1b] text-xs sm:text-sm md:text-base tracking-[0.28em] uppercase font-semibold mt-1">
+        <h2 className="font-cinzel-dec text-[#4a2e1b] text-xs sm:text-sm md:text-base tracking-[0.28em] uppercase font-bold mt-1">
           The Royal Wedding Celebration Of
         </h2>
 
         {/* Grand Calligraphy Couple Names */}
-        <h1 className="font-script text-[#851b22] text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.06] mt-1 mb-1 tracking-wide font-bold drop-shadow-[0_4px_12px_rgba(210,170,83,0.35)] transition-transform hover:scale-[1.01]">
+        <h1 className="font-script text-[#851b22] text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.06] mt-1 mb-1 tracking-wider font-bold drop-shadow-[0_6px_20px_rgba(210,170,83,0.45)] transition-transform hover:scale-[1.02]">
           Anirudh &amp; Vaidehi
         </h1>
 
@@ -99,12 +99,16 @@ export const CardHero: React.FC<CardHeroProps> = ({
         {/* Center Divine Gateway: Sita-Ram Grace in Royal Jharokha Arch */}
         <div className="relative my-3 sm:my-5 group flex items-center justify-center">
           
+          {/* Rotating Celestial Sun Rays / Mandala Halo */}
+          <div className="absolute -inset-6 sm:-inset-10 rounded-full border-2 border-dashed border-[#d2aa53]/35 animate-spin-slow pointer-events-none -z-10" />
+          <div className="absolute -inset-10 sm:-inset-14 rounded-full border border-[#d2aa53]/20 animate-spin-reverse-slow pointer-events-none -z-10" />
+
           {/* Left Traditional Brass Diya Stand with Flickering Flame */}
           <div className="hidden sm:flex flex-col items-center mr-5 md:mr-8 select-none pointer-events-none">
             {/* Animated Diya Flame with Warm Radial Halo */}
             <div className="relative flex items-center justify-center">
-              <div className="absolute w-8 h-8 rounded-full bg-[#f59e0b]/25 blur-sm animate-pulse" />
-              <div className="w-4.5 h-7 rounded-full bg-gradient-to-t from-[#ea580c] via-[#facc15] to-[#fef08a] animate-diya shadow-[0_0_16px_#f59e0b] -mb-1" />
+              <div className="absolute w-10 h-10 rounded-full bg-[#f59e0b]/30 blur-md animate-diya-halo" />
+              <div className="w-4.5 h-7 rounded-full bg-gradient-to-t from-[#ea580c] via-[#facc15] to-[#fef08a] animate-diya shadow-[0_0_18px_#f59e0b] -mb-1" />
             </div>
             {/* Diya Brass Cup & Pillar */}
             <div className="w-10 h-4 rounded-b-full bg-gradient-to-r from-[#b45309] via-[#f59e0b] to-[#b45309] border border-[#78350f] shadow-md" />
@@ -118,7 +122,7 @@ export const CardHero: React.FC<CardHeroProps> = ({
           {/* Divine Frame (Clickable for Sacred Temple Bell & Petal Shower) */}
           <div
             onClick={handlePortraitClick}
-            className="relative w-[260px] sm:w-[310px] md:w-[340px] aspect-[3/4] rounded-t-[44px] sm:rounded-t-[54px] rounded-b-[24px] overflow-hidden border-3 sm:border-4 border-[#d2aa53] shadow-[0_16px_40px_rgba(74,44,29,0.35)] bg-[#f5e9d0] transition-all duration-500 group-hover:scale-[1.02] group-hover:border-[#ffd885] cursor-pointer animate-gold-glow"
+            className="relative w-[260px] sm:w-[310px] md:w-[340px] aspect-[3/4] rounded-t-[44px] sm:rounded-t-[54px] rounded-b-[24px] overflow-hidden border-3 sm:border-4 border-[#d2aa53] shadow-[0_16px_40px_rgba(74,44,29,0.35)] bg-[#f5e9d0] transition-all duration-500 group-hover:scale-[1.02] group-hover:border-[#ffd885] cursor-pointer animate-gold-glow card-interactive"
             title="Tap to receive divine Sita-Ram blessings & flower shower"
           >
             {/* Inner Scalloped Filigree Border */}

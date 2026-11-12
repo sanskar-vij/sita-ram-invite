@@ -90,12 +90,12 @@ export const InvitationCoverGate: React.FC<InvitationCoverGateProps> = ({ onEnte
           With the divine grace of Almighty God, we invite you to
         </p>
 
-        <h2 className="font-marcellus text-[#4a2e1b] text-sm sm:text-base md:text-lg tracking-[0.28em] uppercase font-bold mt-1">
+        <h2 className="font-cinzel-dec text-[#4a2e1b] text-sm sm:text-base md:text-lg tracking-[0.28em] uppercase font-bold mt-1">
           The Wedding Celebration Of
         </h2>
 
         {/* Grand Couple Calligraphy */}
-        <h1 className="font-script text-[#851b22] text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.08] my-1 font-bold tracking-wide drop-shadow-[0_4px_16px_rgba(210,170,83,0.45)]">
+        <h1 className="font-script text-[#851b22] text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.08] my-1 font-bold tracking-wider drop-shadow-[0_6px_22px_rgba(210,170,83,0.5)]">
           Anirudh &amp; Vaidehi
         </h1>
 
@@ -106,8 +106,8 @@ export const InvitationCoverGate: React.FC<InvitationCoverGateProps> = ({ onEnte
           {/* Left Diya Stand with Flickering Flame */}
           <div className="hidden sm:flex flex-col items-center mr-6 select-none pointer-events-none">
             <div className="relative flex items-center justify-center">
-              <div className="absolute w-8 h-8 rounded-full bg-[#f59e0b]/30 blur-sm animate-pulse" />
-              <div className="w-4.5 h-7 rounded-full bg-gradient-to-t from-[#ea580c] via-[#facc15] to-[#fef08a] animate-diya shadow-[0_0_16px_#f59e0b] -mb-1" />
+              <div className="absolute w-10 h-10 rounded-full bg-[#f59e0b]/30 blur-md animate-diya-halo" />
+              <div className="w-4.5 h-7 rounded-full bg-gradient-to-t from-[#ea580c] via-[#facc15] to-[#fef08a] animate-diya shadow-[0_0_18px_#f59e0b] -mb-1" />
             </div>
             <div className="w-9 h-3.5 rounded-b-full bg-gradient-to-r from-[#b45309] via-[#f59e0b] to-[#b45309] border border-[#78350f] shadow-md" />
             <span className="font-devanagari text-[10px] text-[#881c22] mt-1 font-bold tracking-wider">
@@ -142,8 +142,8 @@ export const InvitationCoverGate: React.FC<InvitationCoverGateProps> = ({ onEnte
           {/* Right Diya Stand with Flickering Flame */}
           <div className="hidden sm:flex flex-col items-center ml-6 select-none pointer-events-none">
             <div className="relative flex items-center justify-center">
-              <div className="absolute w-8 h-8 rounded-full bg-[#f59e0b]/30 blur-sm animate-pulse" />
-              <div className="w-4.5 h-7 rounded-full bg-gradient-to-t from-[#ea580c] via-[#facc15] to-[#fef08a] animate-diya shadow-[0_0_16px_#f59e0b] -mb-1 [animation-delay:0.35s]" />
+              <div className="absolute w-10 h-10 rounded-full bg-[#f59e0b]/30 blur-md animate-diya-halo" />
+              <div className="w-4.5 h-7 rounded-full bg-gradient-to-t from-[#ea580c] via-[#facc15] to-[#fef08a] animate-diya shadow-[0_0_18px_#f59e0b] -mb-1 [animation-delay:0.35s]" />
             </div>
             <div className="w-9 h-3.5 rounded-b-full bg-gradient-to-r from-[#b45309] via-[#f59e0b] to-[#b45309] border border-[#78350f] shadow-md" />
             <span className="font-devanagari text-[10px] text-[#881c22] mt-1 font-bold tracking-wider">

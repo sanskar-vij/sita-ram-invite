@@ -101,7 +101,7 @@ export const RSVPModal: React.FC<RSVPModalProps> = ({
             <p className="font-devanagari text-[#881c22] text-[12px] font-semibold tracking-wider">
               || जय श्री सीताराम ||
             </p>
-            <h2 className="font-display italic text-[#821c21] text-2xl font-bold">
+            <h2 className="font-cinzel-dec text-[#821c21] text-xl sm:text-2xl font-bold">
               {isSubmitted ? 'Attendance Confirmed' : 'Confirm Your Presence'}
             </h2>
           </div>

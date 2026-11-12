@@ -225,7 +225,7 @@ export const CardWeddingEvents: React.FC<CardWeddingEventsProps> = ({
                   <div
                     key={evt.id}
                     onClick={(e) => toggleFlip(evt.id, e)}
-                    className="snap-center shrink-0 w-[240px] sm:w-[270px] md:w-[290px] h-[410px] sm:h-[440px] perspective-1000 select-none cursor-pointer group"
+                    className="snap-center shrink-0 w-[240px] sm:w-[270px] md:w-[290px] h-[410px] sm:h-[440px] perspective-1000 select-none cursor-pointer group card-interactive"
                     title={isFlipped ? 'Click to flip back to painting' : 'Click to flip and view details'}
                   >
                     {/* Inner 3D Flip Container */}
@@ -406,7 +406,7 @@ export const CardWeddingEvents: React.FC<CardWeddingEventsProps> = ({
                 <div
                   key={evt.id}
                   onClick={(e) => toggleFlip(evt.id, e)}
-                  className="perspective-1000 select-none cursor-pointer h-[290px] sm:h-[310px] group"
+                  className="perspective-1000 select-none cursor-pointer h-[290px] sm:h-[310px] group card-interactive"
                   title={isFlipped ? 'Click to flip back' : 'Click to flip and view details'}
                 >
                   <div

@@ -2,29 +2,42 @@ import confetti from 'canvas-confetti';
 
 // Auspicious Indian Wedding Color Palette for Petals & Sparkles
 const WEDDING_CONFETTI_COLORS = [
-  '#f59e0b', // Saffron Marigold
-  '#fbbf24', // Golden Turmeric
-  '#f43f5e', // Sacred Ruby Rose
+  '#9f1239', // Velvet Rose Red
   '#e11d48', // Sindoor Crimson
+  '#ea580c', // Sacred Saffron
+  '#f59e0b', // Radiant Marigold
+  '#fbbf24', // Golden Turmeric
   '#d4af37', // Royal Gold
-  '#fef08a', // Champak Yellow
-  '#ffe4e6', // Soft Petal Pink
+  '#f43f5e', // Ruby Rose
+  '#fecdd3', // Blush Petal Pink
+  '#ffffff', // Fragrant Mogra / Jasmine
 ];
+
+// Authentic Botanical Petal Shapes for realistic Pushpa Vrishti
+let petalShape: confetti.Shape | null = null;
+try {
+  petalShape = confetti.shapeFromPath({
+    path: 'M 12,2 C 18,3 24,10 23,20 C 22,27 16,33 12,35 C 8,33 2,27 1,20 C 0,10 6,3 12,2 Z',
+  });
+} catch {
+  petalShape = null;
+}
 
 /**
  * Triggers a localized burst of sacred rose & marigold petals
  */
-export function triggerPetalBurst(originX = 0.5, originY = 0.5, count = 30) {
+export function triggerPetalBurst(originX = 0.5, originY = 0.5, count = 35) {
   try {
+    const shapes: (string | confetti.Shape)[] = petalShape ? [petalShape, 'circle'] : ['circle'];
     confetti({
       particleCount: count,
-      spread: 70,
+      spread: 75,
       origin: { x: originX, y: originY },
       colors: WEDDING_CONFETTI_COLORS,
-      ticks: 200,
-      gravity: 0.75,
-      scalar: 1.15,
-      shapes: ['circle'],
+      ticks: 240,
+      gravity: 0.65,
+      scalar: 1.25,
+      shapes: shapes as confetti.Shape[],
       disableForReducedMotion: true,
     });
   } catch {
@@ -37,39 +50,47 @@ export function triggerPetalBurst(originX = 0.5, originY = 0.5, count = 30) {
  */
 export function triggerPushpaVrishti() {
   try {
+    const shapes: (string | confetti.Shape)[] = petalShape ? [petalShape, 'circle'] : ['circle'];
+
     // Left burst
     confetti({
-      particleCount: 45,
+      particleCount: 50,
       angle: 60,
-      spread: 55,
-      origin: { x: 0.1, y: 0.7 },
+      spread: 60,
+      origin: { x: 0.08, y: 0.75 },
       colors: WEDDING_CONFETTI_COLORS,
-      scalar: 1.2,
-      gravity: 0.8,
+      scalar: 1.3,
+      gravity: 0.7,
+      ticks: 260,
+      shapes: shapes as confetti.Shape[],
     });
 
     // Right burst
     confetti({
-      particleCount: 45,
+      particleCount: 50,
       angle: 120,
-      spread: 55,
-      origin: { x: 0.9, y: 0.7 },
+      spread: 60,
+      origin: { x: 0.92, y: 0.75 },
       colors: WEDDING_CONFETTI_COLORS,
-      scalar: 1.2,
-      gravity: 0.8,
+      scalar: 1.3,
+      gravity: 0.7,
+      ticks: 260,
+      shapes: shapes as confetti.Shape[],
     });
 
     // Center cascade
     setTimeout(() => {
       confetti({
-        particleCount: 60,
-        spread: 100,
-        origin: { x: 0.5, y: 0.3 },
+        particleCount: 75,
+        spread: 110,
+        origin: { x: 0.5, y: 0.25 },
         colors: WEDDING_CONFETTI_COLORS,
-        scalar: 1.3,
-        gravity: 0.6,
+        scalar: 1.35,
+        gravity: 0.55,
+        ticks: 280,
+        shapes: shapes as confetti.Shape[],
       });
-    }, 250);
+    }, 220);
   } catch {
     // Graceful fallback
   }

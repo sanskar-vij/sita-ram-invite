@@ -74,7 +74,7 @@ export const CardMeetFamilies: React.FC<CardMeetFamiliesProps> = () => {
         {/* Two Grand Royal Family Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 w-full max-w-2xl my-4 text-center">
           {/* Groom's Family: The Sharma Family (वर पक्ष) */}
-          <div className="relative p-5 sm:p-6 rounded-[28px] bg-[#fdfbf7]/95 border-2 border-[#d2aa53] shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:border-[#881c22] group">
+          <div className="relative p-5 sm:p-6 rounded-[28px] bg-[#fdfbf7]/95 border-2 border-[#d2aa53] shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:border-[#881c22] group card-interactive">
             {/* Top Arched Accent Tag */}
             <div className="inline-flex items-center space-x-1.5 px-3.5 py-1 rounded-full bg-[#faf2df] border border-[#d2aa53] mb-3">
               <Crown className="w-3.5 h-3.5 text-[#881c22]" />
@@ -120,7 +120,7 @@ export const CardMeetFamilies: React.FC<CardMeetFamiliesProps> = () => {
           </div>
 
           {/* Bride's Family: The Mishra Family (वधू पक्ष) */}
-          <div className="relative p-5 sm:p-6 rounded-[28px] bg-[#fdfbf7]/95 border-2 border-[#d2aa53] shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:border-[#881c22] group">
+          <div className="relative p-5 sm:p-6 rounded-[28px] bg-[#fdfbf7]/95 border-2 border-[#d2aa53] shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:shadow-2xl hover:border-[#881c22] group card-interactive">
             {/* Top Arched Accent Tag */}
             <div className="inline-flex items-center space-x-1.5 px-3.5 py-1 rounded-full bg-[#faf2df] border border-[#d2aa53] mb-3">
               <Sparkles className="w-3.5 h-3.5 text-[#881c22]" />
