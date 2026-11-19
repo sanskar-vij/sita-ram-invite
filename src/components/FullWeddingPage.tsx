@@ -823,6 +823,29 @@ export const FullWeddingPage: React.FC<FullWeddingPageProps> = ({
         </div>
       </section>
 
+      {/* Royal Footer with Patrika Studio Credit */}
+      <footer className="mt-12 py-8 text-center border-t border-[#d2aa53]/40 space-y-3">
+        <p className="font-devanagari text-[#881c22] font-semibold text-xs tracking-wider">
+          || जय श्री सीताराम ||
+        </p>
+        <p className="font-marcellus text-[#3c2314] text-xs uppercase tracking-widest font-semibold">
+          Anirudh &amp; Vaidehi • 16th December 2026
+        </p>
+        <div className="pt-2 flex items-center justify-center space-x-1.5 text-xs text-[#6c4328]">
+          <span>Designed by</span>
+          <a
+            href="https://patrikastudio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-marcellus font-bold text-[#881c22] hover:text-[#b8860b] underline underline-offset-4 decoration-[#d2aa53] hover:decoration-[#881c22] transition-colors inline-flex items-center space-x-1 group"
+            title="Visit Patrika Studio"
+          >
+            <span>Patrika Studio</span>
+            <span className="text-[11px] text-[#a37128] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform inline-block">↗</span>
+          </a>
+        </div>
+      </footer>
+
     </div>
   );
 };

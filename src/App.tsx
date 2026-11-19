@@ -299,6 +299,21 @@ export function App() {
           <p className="text-[11px] text-[#6c4328] pt-2">
             With boundless love, regards &amp; blessings from the Sharma and Mishra Families.
           </p>
+
+          {/* Patrika Studio Design Credit */}
+          <div className="pt-4 border-t border-[#d2aa53]/40 flex items-center justify-center space-x-1.5 text-xs text-[#6c4328]">
+            <span>Designed by</span>
+            <a
+              href="https://patrikastudio.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-marcellus font-bold text-[#881c22] hover:text-[#b8860b] underline underline-offset-4 decoration-[#d2aa53] hover:decoration-[#881c22] transition-colors inline-flex items-center space-x-1 group"
+              title="Visit Patrika Studio"
+            >
+              <span>Patrika Studio</span>
+              <span className="text-[11px] text-[#a37128] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform inline-block">↗</span>
+            </a>
+          </div>
         </div>
       </footer>
 
